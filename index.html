@@ -1,0 +1,18 @@
+<html>
+<head>
+    <script src='./index.js'></script>
+</head>
+<body>
+    <svg>
+        {randomPoints.map(point => (
+            <circle 
+                cx={point.x}
+                cy={point.y}
+                r="3" 
+                fill={team(point) === -1 ? 'blue' : 'red'}/>
+        ))}
+        <line x1="0" x2={xMax} y1="0" y2={yMax} stroke="purple" />
+    </svg>
+</body>
+
+</html>
